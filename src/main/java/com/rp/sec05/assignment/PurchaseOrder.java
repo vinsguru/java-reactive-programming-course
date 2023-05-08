@@ -19,4 +19,5 @@ public class PurchaseOrder {
         this.category = Util.faker().commerce().department();
         this.quantity = Util.faker().random().nextInt(1, 10);
     }
+
 }
