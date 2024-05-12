@@ -1,0 +1,12 @@
+<!-- http://dev.cs.ovgu.de/java/logback/manual/layouts.html -->
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} %-5level [%15.15t] %cyan(%-30.30logger{30}) : %m%n</pattern>
+        </encoder>
+    </appender>
+    <logger name="io.netty.resolver.dns.DnsServerAddressStreamProviders" level="OFF"/>
+    <root level="INFO">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>
