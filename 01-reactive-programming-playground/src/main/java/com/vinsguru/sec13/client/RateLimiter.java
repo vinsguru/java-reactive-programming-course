@@ -26,7 +26,7 @@ public class RateLimiter {
         });
     }
 
-    private static boolean canAllow(String category) {
+    private static synchronized boolean canAllow(String category) {
         var attempts = categoryAttempts.getOrDefault(category, 0);
         if (attempts > 0) {
             categoryAttempts.put(category, attempts - 1);
